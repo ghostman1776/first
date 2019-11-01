@@ -12,6 +12,8 @@ api = tweepy.API(auth)
 latitude =  40.98
 longitude = -73.81
 
+#load forecast for specific latitude and longitude
+
 forecast = forecastio.load_forecast(api_key, latitude, longitude)
 byDay = forecast.daily()
 
