@@ -31,6 +31,8 @@ my_file = open('primes1.txt', 'r')
 
 file_lines = my_file.readlines()
 
+#close file
+
 my_file.close()
 i = 1
 
