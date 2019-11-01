@@ -15,7 +15,7 @@ byDay = forecast.daily()
 
 tweet = (byDay.summary)
 
-#api.update_status(tweet, latitude, longitude)
+api.update_status(tweet, latitude, longitude)
 
 #print(api.me())
 
