@@ -1,3 +1,5 @@
+#sample twitter bot
+
 from secrets import *
 import tweepy
 import forecastio
