@@ -1,3 +1,5 @@
+#sample twitter bot
+
 from secrets import *
 import tweepy
 import forecastio
@@ -10,12 +12,14 @@ api = tweepy.API(auth)
 latitude =  40.98
 longitude = -73.81
 
+#load forecast for specific latitude and longitude
+
 forecast = forecastio.load_forecast(api_key, latitude, longitude)
 byDay = forecast.daily()
 
 tweet = (byDay.summary)
 
-#api.update_status(tweet, latitude, longitude)
+api.update_status(tweet, latitude, longitude)
 
 #print(api.me())
 
@@ -27,10 +31,12 @@ my_file = open('primes1.txt', 'r')
 
 file_lines = my_file.readlines()
 
+#close file
+
 my_file.close()
 i = 1
 
 for line in file_lines:
 
     api.update_status(line)
-    time.sleep(1800)
+    time.sleep(180)
