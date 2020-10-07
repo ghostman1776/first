@@ -39,4 +39,4 @@ i = 1
 for line in file_lines:
 
     api.update_status(line)
-    time.sleep(1800)
+    time.sleep(180)
